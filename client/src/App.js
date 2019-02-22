@@ -4,45 +4,22 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Footer from "./components/Footer/Footer";
 import Product from "./components/Product/Product";
-import uuid from "uuid";
 import Searchbar from "./components/Searchbar/Searchbar";
+import axios from "axios";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      produtos: [
-        {
-          id: uuid.v4(),
-          category: "carrinho",
-          nome: "carrinho x123",
-          description:
-            "Carrinho na promocao, importado de miami... venha conferir o produto"
-        },
-        {
-          id: uuid.v4(),
-          category: "mala",
-          nome: "mala com rodinha",
-          description:
-            "mala com rodinha na promocao, importado de miami... venha conferir o produto"
-        },
-        {
-          id: uuid.v4(),
-          category: "roupa",
-          nome: "camisa carter",
-          description:
-            "camisa carter na promocao, importado de miami... venha conferir o produto"
-        },
-        {
-          id: uuid.v4(),
-          category: "roupa",
-          nome: "calca carter",
-          description:
-            "calca moletom pra nenem na promocao, importado de miami... venha conferir o produto"
-        }
-      ],
+      produtos: [],
       searchField: ""
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get("/api/produtos")
+      .then(res => this.setState({ produtos: res.data }));
   }
   handleDelete = id => {
     this.setState({

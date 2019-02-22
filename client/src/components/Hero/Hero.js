@@ -10,10 +10,7 @@ export default class Hero extends Component {
             Em breve um Ecommerce de produtos para bebes
           </p>
           <hr className="my-4" />
-          <p>
-            It uses utility classNamees for typography and spacing to space
-            content out within the larger container.
-          </p>
+          <p>Alguma descricao aqui...</p>
           <p className="lead">
             <button className="bg-secondary btn" type="button">
               Learn More
