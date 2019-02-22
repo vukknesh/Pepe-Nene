@@ -47,11 +47,21 @@ class App extends Component {
         <Header />
         <Hero />
         <Searchbar handleChange={this.handleChange} onSubmit={this.onSubmit} />
-        <Product handleDelete={this.handleDelete} produtos={filteredProducts} />
+        <div style={productContainer}>
+          <Product
+            handleDelete={this.handleDelete}
+            produtos={filteredProducts}
+          />
+        </div>
         <Footer />
       </div>
     );
   }
 }
+
+const productContainer = {
+  display: "flex",
+  justifyContent: "space-between"
+};
 
 export default App;

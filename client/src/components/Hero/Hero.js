@@ -4,11 +4,11 @@ export default class Hero extends Component {
   render() {
     return (
       <div>
-        <div className="jumbotron bg-primary">
+        <div className="imgbebe jumbotron bg-primary">
           <h1 className="display-3 text-center">Pepe e Nene</h1>
-          <p className="lead text-center text-white">
+          <h4 className="lead text-center text-black">
             Em breve um Ecommerce de produtos para bebes
-          </p>
+          </h4>
           <hr className="my-4" />
           <p>Alguma descricao aqui...</p>
           <p className="lead">

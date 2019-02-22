@@ -5,7 +5,7 @@ export default class ProductList extends Component {
     const { id, category, nome, description } = this.props.produto;
     return (
       <div className="divStyle">
-        <div className="box">
+        <div className="shade box">
           <div className="card text-white bg-secondary">
             <div className="card-header">{category}</div>
             <div className="card-body">

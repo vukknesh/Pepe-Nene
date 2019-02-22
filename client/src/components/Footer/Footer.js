@@ -18,7 +18,7 @@ const footerStyle = {
   background: "#78C2AD",
   color: "grey",
   margin: "0",
-  padding: "30px",
+
   textAlign: "center",
   padding: "2rem 1rem",
   marginBottom: "2rem",

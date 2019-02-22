@@ -2,7 +2,7 @@ const db = require("../database");
 
 class Products {
   static retrieveAll(callback) {
-    db.query("SELECT nome from products", (err, res) => {
+    db.query("SELECT nome, description, category from products", (err, res) => {
       if (err.error) return callback(err);
       callback(res);
     });

@@ -49,6 +49,12 @@
    -webkit-box-sizing: border-box;
            box-sizing: border-box;
  }
+ .imgbebe{
+  background: url("./img/bebe3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+ }
  
  html {
    font-family: sans-serif;
@@ -5430,14 +5436,21 @@
  
  .divStyle {
    padding: 10px;
-   display: grid;
+   display: block;
    
-   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 
  }
+
+ @media(min-width:768px){
+  .divStyle {
+    padding: 10px;
+    display: flex;
+ }
+}
  .box {
-   padding: 50px;
-   margin: 20px;
+   padding: 10px;
+   margin: 10px;
+   
  }
 
  @media (min-width: 576px) {
